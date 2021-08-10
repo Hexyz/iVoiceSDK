@@ -1,0 +1,6 @@
+framework module IVoiceSDK {
+  umbrella header "IVoiceSDK.h"
+
+  export *
+  module * { export * }
+}

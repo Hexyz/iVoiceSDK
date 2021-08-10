@@ -1,128 +1,12 @@
-# <center>iVoiceSDK iOS开发文档</center>
+#import <UIKit/UIKit.h>
+@class iVoiceADInfo;
 
+typedef struct {
+	CGFloat top;//上边距
+	CGFloat left;//左边距
+	CGFloat right;//右边距
+}iVoiceMargin;
 
-|版本号|日期|说明|
-|:---:|:---:|:---:|
-|1.0.9|2021-09-09|alpha|
-
-<!--[跳转到API接入](#gotoapi)-->
-## 开发环境
-* 确保您的开发及部署环境符合以下标准：
-* 开发工具：推荐Xcode 11及以上版本
-* 部署目标：iOS 10及以上版本
-* SDK版本：官网最新版本
-
-## 术语介绍
-* adid：广告位 ID，是您在企创平台创建某种类型的广告位置的ID。
-* mid:  媒体ID, 是您在企创平台创建某种类型的广告位置的MID。
-
-## 开始使用
-### 使用 CocoaPods
-* 在你的项目的 Podfile 里添加如下内容：
-```Objc
-pod 'iVoiceSDK'
-```
-* 然后运行 pod install 即可。
-
-如果只需要引入某几个特定的子模块，则可参照以下写法，具体的子模块列表请直接查看项目源码里的 QMUIKit.podspec 文件：
-
-
-
-### 手动部署
-* 将动态库iVoiceSDK.framework和iVoiceSDK.bundle拖入项目中（如图所示）并确保添加的动态库 Embed 属性设置为 Embed & Sign
-*  ![](https://i.loli.net/2021/01/08/zGlMjSiowq4uKh6.jpg)
-![-w850](https://i.loli.net/2021/01/08/UgiPxyp3BLGunIt.jpg)
-
-## 其它设置
-* 在Target->Build Settings ->Enable BitCode中设置为NO。
-* 苹果公司在iOS9中升级了应用网络通信安全策略，默认推荐开发者使用HTTPS协议来进行网络通信，并限制HTTP协议的请求。为了避免出现无法拉取到广告的情况，我们推荐开发者在info.plist文件中增加如下配置来实现广告的网络访问：（信任HTTP请求）
-
-```
-<key>NSAppTransportSecurity</key>
-<dict> <key>NSAllowsArbitraryLoads</key> <true/> </dict>
-```
-* 如果希望广告在后台可以播放请配置如图：
-
-![](https://i.loli.net/2021/01/08/XE4x196VC8H7Rmf.jpg)
-
-<!--#### <a id="gotoapi">4.API 接入</a>-->
-
-## SDK 接入
-### 广告初始化类(iVoiceSDK)
-* 在AppDelegate导入`#import <iVoiceSDK/iVoiceSDK.h>` 并且调用 `[iVoiceSDK initWithMid:@"xxxxxxxxxxxxxx"];;`
-* 调用代码示例：
-```ObjC
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
-    [QCiVoiceSDK initialize]; 
-    [iVoiceSDK initWithMid:@"xxxxxxxxxxxxxx"];
-   return YES;  
-} 
-```
-
-## 广告类型
-### 沉浸式自渲染音频互动广告(IVoiceADView)
-* 导入`#import<IVoiceSDK/IVoiceSDK.h>`
-
-```ObjC
-+ (instancetype)create:(CGRect)frame
-        adid:(NSString *)adid
-        config:(iVoiceADConfig *)config;
-
-//设置弹幕显示区域frame
-@property(nonatomic, copy) SetBarrageFrameBlock barrageFrameBlock;
-//广告数据加载状态回调
-@property(nonatomic, copy) iVoiceLoadStateBlock loadStateBlock;
-
-//iVoice开始渲染
-- (void)startRenderiVoice;
-
-//iVoice展示广告
-- (void)showiVoice;
-
-//iVoice关闭广告
-- (void)closeiVoice;
-
-//向iVoice发送一条弹幕
-- (void)sendABarrageToiVoice:(NSString *)comment;
-
-//锁屏展示iVoice
-- (void)displayiVoiceOnLockScreen;
-
-* 回调说明：
-
-```ObjC
-//iVoiceBarrageDelegate
-
-///点击弹幕
-- (void)didClickBarrage:(NSString *)userId
-        avatar:(NSString *)avatar;
-
-///发送弹幕成功了
-- (void)sendBarrageSuccess;
-
-///发送弹幕失败了
-- (void)sendBarrageError:(NSError *)error;
-
-// iVoiceDelegate
-///广告加载成功了
-- (void)loadSucceeded;
-
-///广告加载失败了
-- (void)loadFailed;
-
-///广告曝光了
-- (void)didExpoure;
-
-///广告被点击了
-- (void)didClick;
-
-///广告播放完成
-- (void)didFinish;
-
-```
-* 配置参数说明：
-
-```ObjC
 static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
 	iVoiceMargin magin;
 	magin.top = top;
@@ -215,8 +99,6 @@ static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
 @property(nonatomic, strong) UIColor *tipViewDoneButtonTextColor;
 //Tip广告的关闭按钮控件位置和尺寸
 @property(nonatomic, assign) CGRect tipViewCloseButtonFrame;
-/** Tip广告的关闭按钮控 显示图片（本地图片） */
-@property(nonatomic, copy) NSString *tipViewCloseButtonImageName;
 
 // MARK: - 自定义按钮
 //用户头像控件位置和尺寸
@@ -228,10 +110,7 @@ static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
 
 //点在控件位置和尺寸
 @property(nonatomic, assign) CGRect loveButtonFrame;
-//未点赞控件显示图片（本地图片）
-@property(nonatomic, copy) NSString *loveButtonImage;
-//点赞后控件显示图片（本地图片）
-@property(nonatomic, copy) NSString *loveButtonSelectedImage;
+
 //点赞数量控件位置和尺寸
 @property(nonatomic, assign) CGRect loveLabelFrame;
 //点赞数量控件字体大小
@@ -269,8 +148,6 @@ static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
 @property(nonatomic, assign) CGFloat BarrageAnimationDuration;
 //发送弹幕按钮控件位置和尺寸
 @property(nonatomic, assign) CGRect barrageBtnFrame;
-//发送弹幕控件显示图片
-@property(nonatomic, copy) NSString *barrageImageName;
 //弹幕数量控件位置和尺寸
 @property(nonatomic, assign) CGRect barrageLabelFrame;
 //弹幕数量控件字体大小
@@ -315,27 +192,7 @@ static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
 @property(nonatomic, copy) NSArray<iVoiceADInfo*> *label;
 
 @property(nonatomic, copy, readonly) NSString *labelString;
-```
-* 使用示例：
 
-```ObjC
-    iVoiceADConfig *config=[[iVoiceADConfig alloc] init];
-	self.ADView = [iVoiceADView create:CGRectMake(0, 0, 100, 100) adid:@"xxxxxxxxxxx" config:config];
-	self.ADView.delegate = self;
-	self.ADView.barrageDelegate = self;
-	__weak typeof(self) weakSelf=self;
-	self.ADView.loadStateBlock = ^(BOOL isSuccess) {
-		__strong typeof(self) StrongSelf=weakSelf;
-		if (isSuccess==YES) {
-			[StrongSelf.ADView startRenderiVoice];
-			[StrongSelf.ADView showiVoice];
-		}
-	};
-	[self.view addSubview:self.ADView];
-```
-### 首听广告(iVoiceLaunchView)
-```ObjC
-	iVoiceLaunchView *view = [iVoiceLaunchView create:CGRectMake(0, -89, kScreenWidth, kScreenHeigh) adid:@"xxxxxxx"];
-	view.delegate = self;
-	[self addSubview:view];
-````
+
+@end
+

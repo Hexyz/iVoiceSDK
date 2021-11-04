@@ -3,7 +3,7 @@
 
 |版本号|日期|说明|
 |:---:|:---:|:---:|
-|1.0.9|2021-09-09|alpha|
+|1.1.0|2021-11-03|alpha|
 
 <!--[跳转到API接入](#gotoapi)-->
 ## 开发环境
@@ -339,3 +339,31 @@ static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
 	view.delegate = self;
 	[self addSubview:view];
 ````
+
+### 冠名广告(iVoiceAD)
+```ObjC
+    //初始化冠名广告
+    self.voiceAD = [iVoiceAD createWithAdid:@"xxxxxxxxxxxxxx"];
+    //播放广告
+    [self.voiceAD showiVoice];
+```
+* 使用示例：
+
+```ObjC
+-(void)setupVoiceAD{
+    // 初始化冠名广告
+    self.voiceAD = [iVoiceAD createWithAdid:@"xxxxxxxxxxxxxx"];
+    self.voiceAD.delegate = self;
+}
+
+-(void)playButtonClick {
+    //播放广告
+    [self.voiceAD showiVoice];
+}
+
+-(void)stopButtonClick {
+    //关闭广告
+    [self.voiceAD closeiVoice];
+}
+
+```

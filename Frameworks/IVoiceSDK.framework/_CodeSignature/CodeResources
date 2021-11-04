@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/iVoiceAD.h</key>
+		<data>
+		w/XdZCHVmyLRhSThWcOMLpBQd7Q=
+		</data>
 		<key>Headers/iVoiceADConfig.h</key>
 		<data>
 		BpBAr4V6yatVOCkCbEczyquTHik=
@@ -30,11 +34,11 @@
 		</data>
 		<key>Headers/iVoiceSDK.h</key>
 		<data>
-		N7p2JHFx8aUfrHIZRuJ/wfbNziU=
+		ti1xfYJQx41bb6IAytECLOl8SPs=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qcYK3EpO+g3nsf8xQadIOQ5Xp78=
+		Mduoj4E6Ej5BhpKx+kBXsxUyjzQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,6 +51,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/iVoiceAD.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6q/idAqxjFptjQ3J4AlXXsnAoYWaFiRgIYCdbR1pODs=
+			</data>
+		</dict>
 		<key>Headers/iVoiceADConfig.h</key>
 		<dict>
 			<key>hash2</key>
@@ -93,7 +104,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FIabckIRpU0fqBY9VBgPS1XK2BdvDZ0YLj8br4YibPo=
+			ZUBY7FqoDJPkF4lpZCw4fXQOX+91CMpUSu/W2jkYzjk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -3,6 +3,7 @@
 #import "iVoiceADConfig.h"
 #import "iVoiceADView.h"
 #import "iVoiceLaunchView.h"
+#import "iVoiceAD.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -8,7 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, weak) id <iVoiceDelegate> delegate;
 
 //+ (instancetype)createWithAdid:(NSString *)adid;
-+ (instancetype)initWithFrame:(CGRect)frame adid:(NSString *)adid;
++ (instancetype)create:(CGRect)frame adid:(NSString *)adid;
 
 @end
 

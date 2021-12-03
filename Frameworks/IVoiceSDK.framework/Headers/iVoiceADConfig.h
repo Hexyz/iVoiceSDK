@@ -1,21 +1,21 @@
 #import <UIKit/UIKit.h>
-@class iVoiceADInfo;
+#import "IVoiceADInfo.h"
 
 typedef struct {
 	CGFloat top;//上边距
 	CGFloat left;//左边距
 	CGFloat right;//右边距
-}iVoiceMargin;
+}QCiVoiceMargin;
 
-static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
-	iVoiceMargin magin;
+static inline QCiVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
+	QCiVoiceMargin magin;
 	magin.top = top;
 	magin.left = left;
 	magin.right = right;
 	return magin;
 }
 
-@interface iVoiceADConfig : NSObject
+@interface IVoiceADConfig : NSObject
 
 ///右侧工具栏是否显示，默认YES显示
 @property(nonatomic, assign) BOOL isShowTools;
@@ -29,14 +29,14 @@ static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
  */
 @property(nonatomic, assign) BOOL isShowCountDown;
 //倒计时控件位置
-@property(nonatomic, assign) iVoiceMargin countDownMargin;
+@property(nonatomic, assign) QCiVoiceMargin countDownMargin;
 
 // MARK: - 广告视图整体高度
 @property(nonatomic, assign) CGSize iVoiceADViewSize;
 
 // MARK: - 标题
 //标题距离整个广告 左 右 上 边距
-@property(nonatomic, assign) iVoiceMargin titleMargin;
+@property(nonatomic, assign) QCiVoiceMargin titleMargin;
 //标题字体
 @property(nonatomic, strong) UIFont *titleFont;
 //标题字体颜色
@@ -46,7 +46,7 @@ static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
 
 // MARK: -  描述
 //描述距离标题上边距和整个广告 左 右 边距 top为距离titleLabel底部距离
-@property(nonatomic, assign) iVoiceMargin summaryMargin;
+@property(nonatomic, assign) QCiVoiceMargin summaryMargin;
 //描述字体尺寸
 @property(nonatomic, strong) UIFont *summaryFont;
 //描述字体颜色
@@ -191,10 +191,9 @@ static inline iVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
    iVoice的sdk需要让媒体方在sdk方法中提交用户在广告请求前所听过的最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
  */
 // 调用者 需要传入 请求广告前 自己APP内的 最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
-@property(nonatomic, copy) NSArray<iVoiceADInfo*> *label;
+@property(nonatomic, copy) NSArray<IVoiceADInfo*> *label;
 
 @property(nonatomic, copy, readonly) NSString *labelString;
-
 
 @end
 

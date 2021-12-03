@@ -1,14 +1,16 @@
 #import <UIKit/UIKit.h>
-#import <iVoiceSDK/iVoiceDelegate.h>
+#import "IVoiceDelegate.h"
+#import "IVoiceADConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface iVoiceLaunchView : UIView
+@interface IVoiceLaunchView : UIView
 
-@property(nonatomic, weak) id <iVoiceDelegate> delegate;
+@property(nonatomic, weak) id <IVoiceDelegate> delegate;
 
-//+ (instancetype)createWithAdid:(NSString *)adid;
-+ (instancetype)create:(CGRect)frame adid:(NSString *)adid;
++ (instancetype)create:(CGRect)frame
+                  adid:(NSString *)adid
+                config:(IVoiceADConfig *)config;
 
 @end
 

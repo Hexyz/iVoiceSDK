@@ -1,9 +1,9 @@
-# <center>iVoiceSDK iOS开发文档</center>
+# <center>IVoiceSDK iOS开发文档</center>
 
 
 |版本号|日期|说明|
 |:---:|:---:|:---:|
-|1.1.1|2021-12-02|release|
+|1.1.1-beta1|2021-12-03|release|
 
 <!--[跳转到API接入](#gotoapi)-->
 ## 开发环境
@@ -20,7 +20,7 @@
 ### 使用 CocoaPods
 * 在你的项目的 Podfile 里添加如下内容：
 ```Objc
-pod 'IVoiceSDK','1.1.1'
+pod 'IVoiceSDK','1.1.1-beta1'
 ```
 * 然后运行 pod install 即可。
 
@@ -48,14 +48,14 @@ pod 'IVoiceSDK','1.1.1'
 <!--#### <a id="gotoapi">4.API 接入</a>-->
 
 ## SDK 接入
-### 广告初始化类(iVoiceSDK)
+### 广告初始化类(IVoiceSDK)
 - mid: 您的媒体id;
 - dnt: 是否允许广告跟踪;
-* 在AppDelegate导入`#import <iVoiceSDK/iVoiceSDK.h>` 并且调用 `[iVoiceSDK initWithMid:@"xxxxxxxxxxxxxx" dnt:NO];`
+* 在AppDelegate导入`#import <IVoiceSDK/IVoiceSDK.h>` 并且调用 `[IVoiceSDK initWithMid:@"xxxxxxxxxxxxxx" dnt:NO];`
 * 调用代码示例：
 ```ObjC
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { 
-     [iVoiceSDK initWithMid:@"xxxxxxxxxxxxxx" dnt:NO]
+     [IVoiceSDK initWithMid:@"xxxxxxxxxxxxxx" dnt:NO]
    return YES;  
 } 
 ```
@@ -67,12 +67,12 @@ pod 'IVoiceSDK','1.1.1'
 ```ObjC
 + (instancetype)create:(CGRect)frame
         adid:(NSString *)adid
-        config:(iVoiceADConfig *)config;
+        config:(IVoiceADConfig *)config;
 
 //设置弹幕显示区域frame
 @property(nonatomic, copy) SetBarrageFrameBlock barrageFrameBlock;
 //广告数据加载状态回调
-@property(nonatomic, copy) iVoiceLoadStateBlock loadStateBlock;
+@property(nonatomic, copy) IVoiceLoadStateBlock loadStateBlock;
 
 //iVoice开始渲染
 - (void)startRenderiVoice;
@@ -102,7 +102,7 @@ pod 'IVoiceSDK','1.1.1'
 - (void)sendBarrageError:(NSError *)error;
 
 
-// iVoiceDelegate
+// IVoiceDelegate
 //广告加载成功了
 - (void)loadSucceeded;
 
@@ -126,7 +126,7 @@ typedef struct {
 	CGFloat top;//上边距
 	CGFloat left;//左边距
 	CGFloat right;//右边距
-}iVoiceMargin;
+}QCiVoiceMargin;
 
 ///右侧工具栏是否显示，默认YES显示
 @property(nonatomic, assign) BOOL isShowTools;
@@ -140,14 +140,14 @@ typedef struct {
  */
 @property(nonatomic, assign) BOOL isShowCountDown;
 //倒计时控件位置
-@property(nonatomic, assign) iVoiceMargin countDownMargin;
+@property(nonatomic, assign) QCiVoiceMargin countDownMargin;
 
 // MARK: - 广告视图整体高度
 @property(nonatomic, assign) CGSize iVoiceADViewSize;
 
 // MARK: - 标题
 //标题距离整个广告 左 右 上 边距
-@property(nonatomic, assign) iVoiceMargin titleMargin;
+@property(nonatomic, assign) QCiVoiceMargin titleMargin;
 //标题字体
 @property(nonatomic, strong) UIFont *titleFont;
 //标题字体颜色
@@ -157,7 +157,7 @@ typedef struct {
 
 // MARK: -  描述
 //描述距离标题上边距和整个广告 左 右 边距 top为距离titleLabel底部距离
-@property(nonatomic, assign) iVoiceMargin summaryMargin;
+@property(nonatomic, assign) QCiVoiceMargin summaryMargin;
 //描述字体尺寸
 @property(nonatomic, strong) UIFont *summaryFont;
 //描述字体颜色
@@ -302,14 +302,14 @@ typedef struct {
    iVoice的sdk需要让媒体方在sdk方法中提交用户在广告请求前所听过的最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
  */
 // 调用者 需要传入 请求广告前 自己APP内的 最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
-@property(nonatomic, copy) NSArray<iVoiceADInfo*> *label;
+@property(nonatomic, copy) NSArray<IVoiceADInfo*> *label;
 
 @property(nonatomic, copy, readonly) NSString *labelString;
 ```
 * 使用示例：
 
 ```ObjC
-    iVoiceADConfig *config=[[iVoiceADConfig alloc] init];
+    IVoiceADConfig *config=[[IVoiceADConfig alloc] init];
 	 config.isShowCountDown = YES;
     config.titleNumberOfLines = 1;
     config.summaryNumberOfLines = 0;
@@ -317,7 +317,7 @@ typedef struct {
     config.titleMargin = make(100, 20,300);
     config.summaryMargin = make(16, 20, 200);
 
-	self.ADView = [iVoiceADView create:CGRectMake(0, 0, 100, 100) adid:@"xxxxxxxxxxx" config:config];
+	self.ADView = [IVoiceADView create:CGRectMake(0, 0, 100, 100) adid:@"xxxxxxxxxxx" config:config];
 	self.ADView.delegate = self;
 	self.ADView.barrageDelegate = self;
 	__weak typeof(self) weakSelf=self;
@@ -330,17 +330,17 @@ typedef struct {
 	};
 	[self.view addSubview:self.ADView];
 ```
-### 首听广告(iVoiceLaunchView)
+### 首听广告(IVoiceLaunchView)
 ```ObjC
-	iVoiceLaunchView *view = [iVoiceLaunchView create:CGRectMake(0, -89, kScreenWidth, kScreenHeigh) adid:@"xxxxxxx"];
+	IVoiceLaunchView *view = [IVoiceLaunchView create:CGRectMake(0, -89, kScreenWidth, kScreenHeigh) adid:@"xxxxxxx"];
 	view.delegate = self;
 	[self addSubview:view];
 ````
 
-### 冠名广告(iVoiceAD)
+### 冠名广告(IVoiceAD)
 ```ObjC
     //初始化冠名广告
-    self.voiceAD = [iVoiceAD createWithAdid:@"xxxxxxxxxxxxxx"];
+    self.voiceAD = [IVoiceAD createWithAdid:@"xxxxxxxxxxxxxx"];
     //播放广告
     [self.voiceAD showiVoice];
 ```
@@ -349,7 +349,7 @@ typedef struct {
 ```ObjC
 -(void)setupVoiceAD{
     // 初始化冠名广告
-    self.voiceAD = [iVoiceAD createWithAdid:@"xxxxxxxxxxxxxx"];
+    self.voiceAD = [IVoiceAD createWithAdid:@"xxxxxxxxxxxxxx"];
     self.voiceAD.delegate = self;
 }
 

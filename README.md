@@ -3,7 +3,7 @@
 
 |版本号|日期|说明|
 |:---:|:---:|:---:|
-|1.1.1-beta1|2021-12-03|release|
+|1.1.2-haohi|2021-12-07|beta|
 
 <!--[跳转到API接入](#gotoapi)-->
 ## 开发环境
@@ -20,7 +20,7 @@
 ### 使用 CocoaPods
 * 在你的项目的 Podfile 里添加如下内容：
 ```Objc
-pod 'IVoiceSDK','1.1.1-beta1'
+pod 'IVoiceSDK','1.1.2-haohi'
 ```
 * 然后运行 pod install 即可。
 

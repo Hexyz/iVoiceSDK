@@ -6,23 +6,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <iVoiceSDK/iVoiceDelegate.h>
+#import <iVoiceSDK/IVoiceDelegate.h>
 #import <UIKit/UIKit.h>
+#import "IVoiceADConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class iVoiceADInfo;
+@class IVoiceADInfoIVoiceADInfo;
 
 typedef void (^iVoiceLoadStateBlock)(BOOL state);
 
 
-@interface iVoiceAD : NSObject
+@interface IVoiceAD : NSObject
 
-@property(nonatomic, weak) id <iVoiceDelegate> delegate;
+@property(nonatomic, weak) id <IVoiceDelegate> delegate;
 
 /// 创建音频广告
 /// @param adid 广告adid
-+ (instancetype)createWithAdid:(NSString *)adid;
++ (instancetype)createWithAdid:(NSString *)adid
+                        config:(IVoiceADConfig *)config;
 //广告数据加载状态回调
 @property(nonatomic, copy) iVoiceLoadStateBlock loadStateBlock;
 

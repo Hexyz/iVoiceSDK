@@ -1,6 +1,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol iVoiceDelegate <NSObject>
+@protocol IVoiceDelegate <NSObject>
 
 //广告加载成功了
 - (void)loadSucceeded;

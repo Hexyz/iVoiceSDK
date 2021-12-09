@@ -3,7 +3,7 @@
 
 |版本号|日期|说明|
 |:---:|:---:|:---:|
-|1.1.2-haohi|2021-12-07|beta|
+|1.1.1-beta2|2021-12-09|beta|
 
 <!--[跳转到API接入](#gotoapi)-->
 ## 开发环境
@@ -100,7 +100,6 @@ pod 'IVoiceSDK','1.1.2-haohi'
 
 //发送弹幕失败了
 - (void)sendBarrageError:(NSError *)error;
-
 
 // IVoiceDelegate
 //广告加载成功了
@@ -335,8 +334,7 @@ typedef struct {
 	IVoiceLaunchView *view = [IVoiceLaunchView create:CGRectMake(0, -89, kScreenWidth, kScreenHeigh) adid:@"xxxxxxx"];
 	view.delegate = self;
 	[self addSubview:view];
-````
-
+```
 ### 冠名广告(IVoiceAD)
 ```ObjC
     //初始化冠名广告
@@ -364,3 +362,82 @@ typedef struct {
 }
 
 ```
+### 懒人听书广告(IVoiceMeidaView)
+```ObjC
+ // 封面图
+@property(nonatomic, strong) UIImageView *coverImageView;
+// 广告标识
+@property(nonatomic, strong) UIButton *adButton;
+// 跳过按钮
+@property(nonatomic, strong) UIButton *skipButton;
+// 标题
+@property(nonatomic, strong) UILabel *titleLabel;
+// 描述
+@property(nonatomic, strong) UILabel *summaryLabel;
+// logo图
+@property(nonatomic, strong) UIImageView *logoImageView;
+// 动作按钮（打开详情）
+@property(nonatomic, strong) UIButton *actionButton;
+
+/**
+广告数据加载状态回调
+state：广告是否加载成功，title：广告标题
+typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
+*/
+@property(nonatomic, copy) IVoiceLoadStateBlock loadStateBlock;
+
+//iVoice开始渲染
+- (void)startRenderiVoice;
+
+//iVoice展示广告
+- (void)showiVoice;
+
+//iVoice关闭广告
+- (void)closeiVoice;
+
+```
+- 使用
+```ObjC
+ /**
+     label：
+    iVoice的sdk需要让媒体方在sdk方法中提交用户在广告请求前所听过的最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
+    调用者 需要传入 请求广告前 自己APP内的 最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
+    如果没有可传 nil
+ */
+    self.ADView = [IVoiceMeidaView create:CGRectMake(0, 0, 100, 100) adid:@"xxxxxxxxxxx" label:nil];
+    self.ADView.isShowCountDown = YES;
+    [self.view addSubview:self.ADView];
+    
+    self.ADView.delegate = self;
+    __weak typeof(self) weakSelf = self;
+    self.ADView.loadStateBlock = ^(BOOL isSuccess, NSString *title) {
+        __strong typeof(self) StrongSelf=weakSelf;
+        if (isSuccess==YES) {
+            [StrongSelf.ADView startRenderiVoice];
+            [StrongSelf.ADView showiVoice];
+            /// title ：广告标题
+            StrongSelf.label.text = title;
+            ///此处自可定义控件属性
+            StrongSelf.ADView.titleLabel.textColor = UIColor.redColor;
+        }
+    };
+```
+- 回调
+```ObjC
+// IVoiceDelegate
+//广告加载成功了
+- (void)loadSucceeded;
+
+//广告加载失败了
+- (void)loadFailed;
+
+//广告曝光了
+- (void)didExpoure;
+
+//广告被点击了
+- (void)didClick;
+
+//广告播放完成
+- (void)didFinish;
+```
+

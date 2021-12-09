@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IVoiceADInfo : NSObject
+@interface iVoiceADInfo : NSObject
 /**音频标题 */
 @property(nonatomic, copy) NSString *title;
 ///** 音频地址 */

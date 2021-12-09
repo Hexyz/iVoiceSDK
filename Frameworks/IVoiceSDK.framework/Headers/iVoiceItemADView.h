@@ -1,42 +1,37 @@
-//
-//  iVoiceAD.h
-//  iVoiceDemo
-//
-//  Created by lizhi on 2021/10/15.
-//
-
-#import <Foundation/Foundation.h>
-#import <iVoiceSDK/iVoiceDelegate.h>
 #import <UIKit/UIKit.h>
+#import <iVoiceSDK/iVoiceDelegate.h>
+#import <iVoiceSDK/iVoiceBarrageDelegate.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
+@class iVoiceADConfig;
+@class iVoiceADView;
 @class iVoiceADInfo;
 
 typedef void (^iVoiceLoadStateBlock)(BOOL state);
+typedef CGRect (^SetBarrageFrameBlock)(CGRect titleFrame, CGRect descFrame);
 
-
-@interface iVoiceAD : NSObject
-
+@interface iVoiceItemADView : UIView
 @property(nonatomic, weak) id <iVoiceDelegate> delegate;
 
-/// 创建音频广告
-/// @param adid 广告adid
 + (instancetype)createWithAdid:(NSString *)adid;
+
 //广告数据加载状态回调
 @property(nonatomic, copy) iVoiceLoadStateBlock loadStateBlock;
+
+//iVoice开始渲染
+- (void)startRenderiVoice;
 
 //iVoice展示广告
 - (void)showiVoice;
 
-//iVoice关闭广告
+//iVoice展示弹出广告
+- (void)showPopulAdView;
 
+//iVoice关闭广告
 - (void)closeiVoice;
 
 //锁屏展示iVoice
 - (void)displayiVoiceOnLockScreen;
 
-
 @end
 
-NS_ASSUME_NONNULL_END
+

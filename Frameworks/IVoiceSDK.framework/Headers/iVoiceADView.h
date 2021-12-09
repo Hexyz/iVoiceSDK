@@ -1,21 +1,21 @@
 #import <UIKit/UIKit.h>
-#import <IVoiceSDK/IVoiceDelegate.h>
-#import <IVoiceSDK/IVoiceBarrageDelegate.h>
+#import <iVoiceSDK/iVoiceDelegate.h>
+#import <iVoiceSDK/iVoiceBarrageDelegate.h>
 
-@class IVoiceADConfig;
-@class IVoiceADView;
-@class IVoiceADInfoIVoiceADInfo;
+@class iVoiceADConfig;
+@class iVoiceADView;
+@class iVoiceADInfo;
 
 typedef void (^iVoiceLoadStateBlock)(BOOL state);
 typedef CGRect (^SetBarrageFrameBlock)(CGRect titleFrame, CGRect descFrame);
 
-@interface IVoiceADView : UIView
-@property(nonatomic, weak) id <IVoiceDelegate> delegate;
-@property(nonatomic, weak) id <IVoiceBarrageDelegate> barrageDelegate;
+@interface iVoiceADView : UIView
+@property(nonatomic, weak) id <iVoiceDelegate> delegate;
+@property(nonatomic, weak) id <iVoiceBarrageDelegate> barrageDelegate;
 
 + (instancetype)create:(CGRect)frame
         adid:(NSString *)adid
-        config:(IVoiceADConfig *)config;
+        config:(iVoiceADConfig *)config;
 
 //设置弹幕显示区域frame
 @property(nonatomic, copy) SetBarrageFrameBlock barrageFrameBlock;

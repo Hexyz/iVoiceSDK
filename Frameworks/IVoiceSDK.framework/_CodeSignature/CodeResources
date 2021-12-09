@@ -4,45 +4,45 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/IVoiceAD.h</key>
+		<key>Headers/iVoiceAD.h</key>
 		<data>
-		LDAACDpMTZdaQ9squzFiR74/dYw=
+		w/XdZCHVmyLRhSThWcOMLpBQd7Q=
 		</data>
-		<key>Headers/IVoiceADConfig.h</key>
+		<key>Headers/iVoiceADConfig.h</key>
 		<data>
-		n5awmLDKyjBq/JlIpNOwKNLsILw=
+		BpBAr4V6yatVOCkCbEczyquTHik=
 		</data>
-		<key>Headers/IVoiceADInfo.h</key>
+		<key>Headers/iVoiceADInfo.h</key>
 		<data>
-		l0cbi7fgrMe7cFuPDk2fkhiKSpc=
+		eQp3c1AopQXqmyGA5RiDvUprhRQ=
 		</data>
-		<key>Headers/IVoiceADView.h</key>
+		<key>Headers/iVoiceADView.h</key>
 		<data>
-		aOfhk9a7+1oyq+nQ6ifPi8m1k7c=
+		8FdEw1Y5jd7/qSRCkrECqHjZDOQ=
 		</data>
-		<key>Headers/IVoiceBarrageDelegate.h</key>
+		<key>Headers/iVoiceBarrageDelegate.h</key>
 		<data>
-		04U9d/czdnOudYXIxQvr/qPvuWc=
+		6czUaLkHPSi2xnrDBTudydZIlGU=
 		</data>
-		<key>Headers/IVoiceDelegate.h</key>
+		<key>Headers/iVoiceDelegate.h</key>
 		<data>
-		ZpI/Ryx1KifTxUJjA98F1uXuDcU=
+		+A6uVdJ+x1vPXbeIwVv6BRe/Vrs=
 		</data>
-		<key>Headers/IVoiceLaunchView.h</key>
+		<key>Headers/iVoiceItemADView.h</key>
 		<data>
-		VacLfzIlwoKG3w7CH+sOl6d9bv4=
+		7WiwxsE6KE2c43JfhankvjhNxTE=
 		</data>
-		<key>Headers/IVoiceMeidaView.h</key>
+		<key>Headers/iVoiceLaunchADView.h</key>
 		<data>
-		Vdft5OkaWWkWWcav+eWpyh1aVk8=
+		ErtCWaBpqt5LKOgFTx5HmDttEp0=
 		</data>
-		<key>Headers/IVoiceSDK.h</key>
+		<key>Headers/iVoiceSDK.h</key>
 		<data>
-		bUWcd0V3+n0CSQcP3rOqGI3nxH0=
+		Y/tbh++N5nZVaBC1CX+kNV2SBac=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		K3K/BPp1379KS/kxdiylcbcAc3o=
+		ZmqKG2TasGIeiwqF4Ko0Y8sy9P4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,111 +55,71 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/IVoiceAD.h</key>
+		<key>Headers/iVoiceAD.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			LDAACDpMTZdaQ9squzFiR74/dYw=
-			</data>
 			<key>hash2</key>
 			<data>
-			vE7YyWFomq5cR51rAiWk7vx75oSTsQNYwDR2Pg9k3Og=
+			6q/idAqxjFptjQ3J4AlXXsnAoYWaFiRgIYCdbR1pODs=
 			</data>
 		</dict>
-		<key>Headers/IVoiceADConfig.h</key>
+		<key>Headers/iVoiceADConfig.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			n5awmLDKyjBq/JlIpNOwKNLsILw=
-			</data>
 			<key>hash2</key>
 			<data>
-			D8fYFOtj1jlCCPtzFDp1sQtcmkNfA+DxN5uijWmSN8U=
+			pxFdEk6iW2Gp+rRN+2NRh/nL+JA3eohEigmZXch1B3Q=
 			</data>
 		</dict>
-		<key>Headers/IVoiceADInfo.h</key>
+		<key>Headers/iVoiceADInfo.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			l0cbi7fgrMe7cFuPDk2fkhiKSpc=
-			</data>
 			<key>hash2</key>
 			<data>
-			h3tcUcjDueWUAlK7P7WQlS5sq/8YgoCqns5ytyTOsqo=
+			Fp/vYuG+ZDXg96SuTJJTD45rOonEgC1xkIfdB3S7Fqs=
 			</data>
 		</dict>
-		<key>Headers/IVoiceADView.h</key>
+		<key>Headers/iVoiceADView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			aOfhk9a7+1oyq+nQ6ifPi8m1k7c=
-			</data>
 			<key>hash2</key>
 			<data>
-			WPmznb1cO3O1MZzl2mWI35nPlpBbhnt0qjMPp2KyRIk=
+			RQ3ZCi82XR9eRQc0fCIwBpOZx7hjb86LN/3iM91nYlw=
 			</data>
 		</dict>
-		<key>Headers/IVoiceBarrageDelegate.h</key>
+		<key>Headers/iVoiceBarrageDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			04U9d/czdnOudYXIxQvr/qPvuWc=
-			</data>
 			<key>hash2</key>
 			<data>
-			fqQ4t+4rkZf5oUIbMsS6UrWij5i2uPaKq4kGsLL+Gzk=
+			AOFBwRmw6/t5UrN5nCK/7hmtyLPQYOAWJfDwIAII/us=
 			</data>
 		</dict>
-		<key>Headers/IVoiceDelegate.h</key>
+		<key>Headers/iVoiceDelegate.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ZpI/Ryx1KifTxUJjA98F1uXuDcU=
-			</data>
 			<key>hash2</key>
 			<data>
-			8TqqKuX1gdcxTutdmE2VRmPWaM8Q/sQRj9Mz2lTuYsM=
+			lKWw+NuqMjxNJuTAMOcaiZUVJalBBTFo5phgj2GnEos=
 			</data>
 		</dict>
-		<key>Headers/IVoiceLaunchView.h</key>
+		<key>Headers/iVoiceItemADView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			VacLfzIlwoKG3w7CH+sOl6d9bv4=
-			</data>
 			<key>hash2</key>
 			<data>
-			4pjdBcHv1aSpAJdGbFdqPrZX2X3hUyNdgLsiVjXmSOc=
+			Z7coK9tYfvslwOOw57bZKzmnaMl7kb/FC2GIpZtZO8M=
 			</data>
 		</dict>
-		<key>Headers/IVoiceMeidaView.h</key>
+		<key>Headers/iVoiceLaunchADView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Vdft5OkaWWkWWcav+eWpyh1aVk8=
-			</data>
 			<key>hash2</key>
 			<data>
-			JTXgqF3NkdBC/oJ2ne5KsAnFEUD9G2ogrnEW/PhR+Z8=
+			lie036d/KuDmIVTOjKPvr48Dy+vSQDEt7n97oeDciBs=
 			</data>
 		</dict>
-		<key>Headers/IVoiceSDK.h</key>
+		<key>Headers/iVoiceSDK.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			bUWcd0V3+n0CSQcP3rOqGI3nxH0=
-			</data>
 			<key>hash2</key>
 			<data>
-			6yByFALY6EJ2Tn9rE+vZuSronEiKswVGiDuiLtp9W3c=
+			oyrgMUdKtLzIfionV9d5dp7AqgAljgMu+MnDVLjCL8I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Nm58IvwIV6tPi8AkgfpEUHBoj2M=
-			</data>
 			<key>hash2</key>
 			<data>
 			d4sYcCM192iENTMy8XUqEbBLmg0esLCEKBWqi3wa53A=
@@ -167,10 +127,6 @@
 		</dict>
 		<key>iVoiceDemo-Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			R+/drTb0cmVHyAqw8zIATyscjNs=
-			</data>
 			<key>hash2</key>
 			<data>
 			eNhV9rKiX3ia+kg8mpmIBzrGUlyOPM1NmlQo3Hk3D0Q=

@@ -1,16 +1,16 @@
 #import <Foundation/Foundation.h>
-#import "IVoiceADInfo.h"
-#import "IVoiceADConfig.h"
-#import "IVoiceADView.h"
-#import "IVoiceLaunchView.h"
-#import "IVoiceAD.h"
-#import "IVoiceMeidaView.h"
+#import "iVoiceADInfo.h"
+#import "iVoiceADConfig.h"
+#import "iVoiceADView.h"
+#import "iVoiceLaunchADView.h"
+#import "iVoiceItemADView.h"
+#import "iVoiceAD.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IVoiceSDK : NSObject
+@interface iVoiceSDK : NSObject
 
-+ (void)initWithMid:(NSString *)mid dnt:(BOOL) dnt;
++ (void)initWithMid:(NSString *)mid;
 
 @end
 

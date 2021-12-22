@@ -1,6 +1,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol iVoiceBarrageDelegate <NSObject>
+@protocol IVoiceBarrageDelegate <NSObject>
 
 //点击弹幕
 - (void)didClickBarrage:(NSString *)userId

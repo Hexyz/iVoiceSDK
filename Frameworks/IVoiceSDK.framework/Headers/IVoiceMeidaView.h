@@ -56,7 +56,6 @@ typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
 //iVoice关闭广告
 - (void)closeiVoice;
 
-
 @end
 
 

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/IVoiceAD.h</key>
 		<data>
-		LDAACDpMTZdaQ9squzFiR74/dYw=
+		1EqdWCSLCc90+fYKclbs98kLdJI=
 		</data>
 		<key>Headers/IVoiceADConfig.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/IVoiceDelegate.h</key>
 		<data>
-		ZpI/Ryx1KifTxUJjA98F1uXuDcU=
+		JmUtrh+r0b7mb3X0lnISnCkJ6sw=
 		</data>
 		<key>Headers/IVoiceLaunchView.h</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/IVoiceMeidaView.h</key>
 		<data>
-		Vdft5OkaWWkWWcav+eWpyh1aVk8=
+		L0gkx00hnh911QH/WdDs7brYPv8=
 		</data>
 		<key>Headers/IVoiceSDK.h</key>
 		<data>
-		bUWcd0V3+n0CSQcP3rOqGI3nxH0=
+		/uvwgpfWUnGbxHInFi2BTRsMt7E=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -59,11 +59,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LDAACDpMTZdaQ9squzFiR74/dYw=
+			1EqdWCSLCc90+fYKclbs98kLdJI=
 			</data>
 			<key>hash2</key>
 			<data>
-			vE7YyWFomq5cR51rAiWk7vx75oSTsQNYwDR2Pg9k3Og=
+			33w5MQfqpqBKAEqYiOlw+VcVgBrm3Uh/ZHlh6/0c5uw=
 			</data>
 		</dict>
 		<key>Headers/IVoiceADConfig.h</key>
@@ -114,11 +114,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZpI/Ryx1KifTxUJjA98F1uXuDcU=
+			JmUtrh+r0b7mb3X0lnISnCkJ6sw=
 			</data>
 			<key>hash2</key>
 			<data>
-			8TqqKuX1gdcxTutdmE2VRmPWaM8Q/sQRj9Mz2lTuYsM=
+			CN8Xc4tyZz5G1oTdARqDditSCL9OxEsreD/YbajRxi0=
 			</data>
 		</dict>
 		<key>Headers/IVoiceLaunchView.h</key>
@@ -136,22 +136,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Vdft5OkaWWkWWcav+eWpyh1aVk8=
+			L0gkx00hnh911QH/WdDs7brYPv8=
 			</data>
 			<key>hash2</key>
 			<data>
-			JTXgqF3NkdBC/oJ2ne5KsAnFEUD9G2ogrnEW/PhR+Z8=
+			bQLTRl1hXRJgWEwE8Eir1MzufGPHFZJLZqP9uSVKNRs=
 			</data>
 		</dict>
 		<key>Headers/IVoiceSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bUWcd0V3+n0CSQcP3rOqGI3nxH0=
+			/uvwgpfWUnGbxHInFi2BTRsMt7E=
 			</data>
 			<key>hash2</key>
 			<data>
-			6yByFALY6EJ2Tn9rE+vZuSronEiKswVGiDuiLtp9W3c=
+			T6tU17Vzl5Mo3d+/ebzZy//JJukCdLdBpuTbBOryykk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

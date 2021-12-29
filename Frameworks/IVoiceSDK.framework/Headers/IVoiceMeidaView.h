@@ -25,6 +25,8 @@ typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
 // 动作按钮（打开详情）
 @property(nonatomic, strong) UIButton *actionButton;
 
+@property(nonatomic, copy) NSString *ADString;
+
 @property(nonatomic, weak) id <IVoiceDelegate> delegate;
 
 /**
@@ -55,6 +57,7 @@ typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
 
 //iVoice关闭广告
 - (void)closeiVoice;
+
 
 @end
 

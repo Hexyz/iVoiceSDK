@@ -2,7 +2,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol IVoiceDelegate <NSObject>
 
-@optional
 //广告加载成功了
 - (void)loadSucceeded;
 
@@ -17,9 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 //广告播放完成
 - (void)didFinish;
-
-//广告点击了跳过
-- (void)didSkip;
 
 @end
 

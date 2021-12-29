@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/IVoiceAD.h</key>
 		<data>
-		1EqdWCSLCc90+fYKclbs98kLdJI=
+		LDAACDpMTZdaQ9squzFiR74/dYw=
 		</data>
 		<key>Headers/IVoiceADConfig.h</key>
 		<data>
@@ -26,23 +26,27 @@
 		</data>
 		<key>Headers/IVoiceDelegate.h</key>
 		<data>
-		JmUtrh+r0b7mb3X0lnISnCkJ6sw=
+		ZpI/Ryx1KifTxUJjA98F1uXuDcU=
 		</data>
 		<key>Headers/IVoiceLaunchView.h</key>
 		<data>
-		VacLfzIlwoKG3w7CH+sOl6d9bv4=
+		6fUfChLbwT4FsfDJQdVgbnrwFvU=
 		</data>
 		<key>Headers/IVoiceMeidaView.h</key>
 		<data>
-		L0gkx00hnh911QH/WdDs7brYPv8=
+		GmM+qU5lxnxvTvVYTl1RpdOolpg=
+		</data>
+		<key>Headers/IVoiceModel.h</key>
+		<data>
+		k4ol7GJza+l12J0OPIQ4i2TXu1I=
 		</data>
 		<key>Headers/IVoiceSDK.h</key>
 		<data>
-		/uvwgpfWUnGbxHInFi2BTRsMt7E=
+		TfYSvPry3BlACKffMRGUjPFkH9E=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9EkNzszoVIbVEDXCVLPy92W5kRU=
+		1Ohvy+xuTFhzSVQSz3TUeJ4jOUg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,11 +63,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1EqdWCSLCc90+fYKclbs98kLdJI=
+			LDAACDpMTZdaQ9squzFiR74/dYw=
 			</data>
 			<key>hash2</key>
 			<data>
-			33w5MQfqpqBKAEqYiOlw+VcVgBrm3Uh/ZHlh6/0c5uw=
+			vE7YyWFomq5cR51rAiWk7vx75oSTsQNYwDR2Pg9k3Og=
 			</data>
 		</dict>
 		<key>Headers/IVoiceADConfig.h</key>
@@ -114,44 +118,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JmUtrh+r0b7mb3X0lnISnCkJ6sw=
+			ZpI/Ryx1KifTxUJjA98F1uXuDcU=
 			</data>
 			<key>hash2</key>
 			<data>
-			CN8Xc4tyZz5G1oTdARqDditSCL9OxEsreD/YbajRxi0=
+			8TqqKuX1gdcxTutdmE2VRmPWaM8Q/sQRj9Mz2lTuYsM=
 			</data>
 		</dict>
 		<key>Headers/IVoiceLaunchView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VacLfzIlwoKG3w7CH+sOl6d9bv4=
+			6fUfChLbwT4FsfDJQdVgbnrwFvU=
 			</data>
 			<key>hash2</key>
 			<data>
-			4pjdBcHv1aSpAJdGbFdqPrZX2X3hUyNdgLsiVjXmSOc=
+			YjitgSCVgDC0mWdHewFBIiGdbZnRx+XZec9PvTBrsNI=
 			</data>
 		</dict>
 		<key>Headers/IVoiceMeidaView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L0gkx00hnh911QH/WdDs7brYPv8=
+			GmM+qU5lxnxvTvVYTl1RpdOolpg=
 			</data>
 			<key>hash2</key>
 			<data>
-			bQLTRl1hXRJgWEwE8Eir1MzufGPHFZJLZqP9uSVKNRs=
+			fhUeLbDdhXPutUqE17veBqIdeR8wIflaCAPCqotyHfw=
+			</data>
+		</dict>
+		<key>Headers/IVoiceModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			k4ol7GJza+l12J0OPIQ4i2TXu1I=
+			</data>
+			<key>hash2</key>
+			<data>
+			lywn8wkIqeTgUcbfOb5ujwWpnjw42DFy3IWWdh++OY4=
 			</data>
 		</dict>
 		<key>Headers/IVoiceSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/uvwgpfWUnGbxHInFi2BTRsMt7E=
+			TfYSvPry3BlACKffMRGUjPFkH9E=
 			</data>
 			<key>hash2</key>
 			<data>
-			T6tU17Vzl5Mo3d+/ebzZy//JJukCdLdBpuTbBOryykk=
+			ey5mV2azJ0B/SF72RIkCVj4LFB2mupKQNMCbo1NYtbQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

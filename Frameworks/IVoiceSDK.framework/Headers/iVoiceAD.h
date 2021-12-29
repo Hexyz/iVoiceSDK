@@ -38,6 +38,7 @@ typedef void (^iVoiceLoadStateBlock)(BOOL state);
 //锁屏展示iVoice
 - (void)displayiVoiceOnLockScreen;
 
+
 @end
 
 NS_ASSUME_NONNULL_END

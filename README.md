@@ -3,15 +3,9 @@
 
 |版本号|日期|说明|
 |:---:|:---:|:---:|
-|1.1.1|2021-12-23|beta6|
+|1.1.1|2022-01-07|beta7|
 
 <!--[跳转到API接入](#gotoapi)-->
-## 开发环境
-* 确保您的开发及部署环境符合以下标准：
-* 开发工具：推荐Xcode 11及以上版本
-* 部署目标：iOS 10及以上版本
-* SDK版本：官网最新版本
-
 ## 术语介绍
 * adid：广告位 ID，是您在企创平台创建某种类型的广告位置的ID。
 * mid:  媒体ID, 是您在企创平台创建某种类型的广告位置的MID。
@@ -20,33 +14,9 @@
 ### 使用 CocoaPods
 * 在你的项目的 Podfile 里添加如下内容：
 ```Objc
-pod 'IVoiceSDK','1.1.2-haohi'
+pod 'IVoiceSDK','1.1.1-beta7'
 ```
-* 然后运行 pod install 即可。
-
-如果只需要引入某几个特定的子模块，则可参照以下写法，具体的子模块列表请直接查看项目源码里的 QMUIKit.podspec 文件：
-
-
-
-### 手动部署
-* 将动态库iVoiceSDK.framework和iVoiceSDK.bundle拖入项目中（如图所示）并确保添加的动态库 Embed 属性设置为 Embed & Sign
-*  ![](https://i.loli.net/2021/01/08/zGlMjSiowq4uKh6.jpg)
-![-w850](https://i.loli.net/2021/01/08/UgiPxyp3BLGunIt.jpg)
-
-## 其它设置
-* 在Target->Build Settings ->Enable BitCode中设置为NO。
-* 苹果公司在iOS9中升级了应用网络通信安全策略，默认推荐开发者使用HTTPS协议来进行网络通信，并限制HTTP协议的请求。为了避免出现无法拉取到广告的情况，我们推荐开发者在info.plist文件中增加如下配置来实现广告的网络访问：（信任HTTP请求）
-
-```
-<key>NSAppTransportSecurity</key>
-<dict> <key>NSAllowsArbitraryLoads</key> <true/> </dict>
-```
-* 如果希望广告在后台可以播放请配置如图：
-
-![](https://i.loli.net/2021/01/08/XE4x196VC8H7Rmf.jpg)
-
-<!--#### <a id="gotoapi">4.API 接入</a>-->
-
+* 然后运行 pod update 即可。
 ## SDK 接入
 ### 广告初始化类(IVoiceSDK)
 - mid: 您的媒体id;
@@ -364,10 +334,10 @@ typedef struct {
 ```
 ### 懒人听书广告(IVoiceMeidaView)
 ```ObjC
- // 封面图
+// 封面图
 @property(nonatomic, strong) UIImageView *coverImageView;
 // 广告标识
-@property(nonatomic, strong) UIButton *adButton;
+@property(nonatomic, strong) UILabel *adLabel;
 // 跳过按钮
 @property(nonatomic, strong) UIButton *skipButton;
 // 标题
@@ -386,17 +356,35 @@ typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
 */
 @property(nonatomic, copy) IVoiceLoadStateBlock loadStateBlock;
 
-//iVoice开始渲染
-- (void)startRenderiVoice;
-
-//iVoice展示广告
+// iVoice展示广告
 - (void)showiVoice;
 
-//iVoice关闭广告
+// iVoice关闭广告
 - (void)closeiVoice;
 
 ```
-- 使用
+#### 使用
+- 您需要在 AppDelegate.m 中添加对应通知代码
+```ObjC
+
+- (void)applicationProtectedDataWillBecomeUnavailable:(UIApplication *)application {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"corpize.ivoice.screen" object:@"lock"];
+}
+
+- (void)applicationProtectedDataDidBecomeAvailable:(UIApplication *)application {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"corpize.ivoice.screen" object:@"unlock"];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"corpize.ivoice.active" object:@"active"];
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"corpize.ivoice.active" object:@"inactive"];
+}
+```
+
+- 开始使用
 ```ObjC
  /**
      label：
@@ -422,9 +410,8 @@ typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
         }
     };
 ```
-- 回调
+- 回调 IVoiceDelegate
 ```ObjC
-// IVoiceDelegate
 //广告加载成功了
 - (void)loadSucceeded;
 
@@ -439,5 +426,9 @@ typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
 
 //广告播放完成
 - (void)didFinish;
+
+//广告点击了跳过
+- (void)didSkip;
+
 ```
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "IVoiceSDK"
-  spec.version      = "1.1.1-HaoHi"
+  spec.version      = "1.1.1-beta7"
   spec.summary      = "iVoiceSDK"
   spec.description  = "Corpize iVoiceSDK for iOS."
   spec.homepage     = "https://github.com/Hexyz/iVoiceSDK"

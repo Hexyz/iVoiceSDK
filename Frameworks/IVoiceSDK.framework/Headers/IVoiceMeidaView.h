@@ -1,5 +1,5 @@
-#import <UIKit/UIKit.h>
 #import <IVoiceSDK/IVoiceDelegate.h>
+#import <UIKit/UIKit.h>
 #import "IVoiceADInfo.h"
 
 @class IVoiceADConfig;
@@ -10,10 +10,10 @@
 typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
 
 @interface IVoiceMeidaView : UIView
- // 封面图
+// 封面图
 @property(nonatomic, strong) UIImageView *coverImageView;
 // 广告标识
-@property(nonatomic, strong) UIButton *adButton;
+@property(nonatomic, strong) UILabel *adLabel;
 // 跳过按钮
 @property(nonatomic, strong) UIButton *skipButton;
 // 标题
@@ -25,9 +25,7 @@ typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
 // 动作按钮（打开详情）
 @property(nonatomic, strong) UIButton *actionButton;
 
-@property(nonatomic, copy) NSString *ADString;
-
-@property(nonatomic, weak) id <IVoiceDelegate> delegate;
+@property(nonatomic, weak) id<IVoiceDelegate> delegate;
 
 /**
  - 示倒计时倒计时（仅有倒计时，无法跳过）style：[sss ]
@@ -41,24 +39,19 @@ typedef void (^IVoiceLoadStateBlock)(BOOL state, NSString *title);
 /**
      label：
     iVoice的sdk需要让媒体方在sdk方法中提交用户在广告请求前所听过的最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
-    调用者 需要传入 请求广告前 自己APP内的 最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
+    调用者 需要传入 请求广告前 自己APP内的
+   最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
     如果没有可传 nil
  */
-+ (instancetype)create:(CGRect)frame adid:(NSString *)adid label:(NSArray<IVoiceADInfo*> *)label;
++ (instancetype)create:(CGRect)frame adid:(NSString *)adid label:(NSArray<IVoiceADInfo *> *)label;
 
 //广告数据加载状态回调
 @property(nonatomic, copy) IVoiceLoadStateBlock loadStateBlock;
 
-//iVoice开始渲染
-- (void)startRenderiVoice;
-
-//iVoice展示广告
+// iVoice展示广告
 - (void)showiVoice;
 
-//iVoice关闭广告
+// iVoice关闭广告
 - (void)closeiVoice;
 
-
 @end
-
-

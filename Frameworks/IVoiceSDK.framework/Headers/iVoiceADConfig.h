@@ -2,17 +2,17 @@
 #import "IVoiceADInfo.h"
 
 typedef struct {
-	CGFloat top;//上边距
-	CGFloat left;//左边距
-	CGFloat right;//右边距
-}QCiVoiceMargin;
+  CGFloat top;    //上边距
+  CGFloat left;   //左边距
+  CGFloat right;  //右边距
+} QCiVoiceMargin;
 
-static inline QCiVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
-	QCiVoiceMargin magin;
-	magin.top = top;
-	magin.left = left;
-	magin.right = right;
-	return magin;
+static inline QCiVoiceMargin make(CGFloat top, CGFloat left, CGFloat right) {
+  QCiVoiceMargin magin;
+  magin.top   = top;
+  magin.left  = left;
+  magin.right = right;
+  return magin;
 }
 
 @interface IVoiceADConfig : NSObject
@@ -167,7 +167,7 @@ static inline QCiVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
 /** 占位符颜色 */
 @property(nonatomic, strong) UIColor *barrageTextViewPlaceholderColor;
 /** 输入框背景颜色 */
-@property(nonatomic, strong) UIColor* barrageTextViewBackgroundColor;
+@property(nonatomic, strong) UIColor *barrageTextViewBackgroundColor;
 /** 发送按钮背景色 */
 @property(nonatomic, strong) UIColor *sendBarrageButtonBackgroundColor;
 /** 发送按钮Title */
@@ -190,10 +190,10 @@ static inline QCiVoiceMargin make (CGFloat top,CGFloat left, CGFloat right) {
 /**
    iVoice的sdk需要让媒体方在sdk方法中提交用户在广告请求前所听过的最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
  */
-// 调用者 需要传入 请求广告前 自己APP内的 最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
-@property(nonatomic, copy) NSArray<IVoiceADInfo*> *label;
+// 调用者 需要传入 请求广告前 自己APP内的
+// 最近5～10条组信息，信息字段包含：标题（专辑／歌曲名称+作者+歌手等英文逗号分隔）、音频文件url、结束播放时的进度百分比
+@property(nonatomic, copy) NSArray<IVoiceADInfo *> *label;
 
 @property(nonatomic, copy, readonly) NSString *labelString;
 
 @end
-

@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/IVoiceAD.h</key>
 		<data>
-		LDAACDpMTZdaQ9squzFiR74/dYw=
+		bWC+TfVj8bdhECK2pxZlKEIPKD0=
 		</data>
 		<key>Headers/IVoiceADConfig.h</key>
 		<data>
-		n5awmLDKyjBq/JlIpNOwKNLsILw=
+		oLzdbOcbMD0tajQ4ra/892U7LSE=
 		</data>
 		<key>Headers/IVoiceADInfo.h</key>
 		<data>
@@ -18,35 +18,31 @@
 		</data>
 		<key>Headers/IVoiceADView.h</key>
 		<data>
-		aOfhk9a7+1oyq+nQ6ifPi8m1k7c=
+		kIeq2+0BoOqtFNoybJDNcff9MsA=
 		</data>
 		<key>Headers/IVoiceBarrageDelegate.h</key>
 		<data>
-		04U9d/czdnOudYXIxQvr/qPvuWc=
+		fn9lII1Cy42pCY8HstvrtMI2b28=
 		</data>
 		<key>Headers/IVoiceDelegate.h</key>
 		<data>
-		ZpI/Ryx1KifTxUJjA98F1uXuDcU=
+		sRO6wxRsu3dtPJTm4TbEe9uBEAQ=
 		</data>
 		<key>Headers/IVoiceLaunchView.h</key>
 		<data>
-		6fUfChLbwT4FsfDJQdVgbnrwFvU=
+		VsMWMDHT6HTUSSEoYbw334LjY7k=
 		</data>
 		<key>Headers/IVoiceMeidaView.h</key>
 		<data>
-		GmM+qU5lxnxvTvVYTl1RpdOolpg=
-		</data>
-		<key>Headers/IVoiceModel.h</key>
-		<data>
-		k4ol7GJza+l12J0OPIQ4i2TXu1I=
+		w2th0t+bnITVXViGNtB/GdUWCFA=
 		</data>
 		<key>Headers/IVoiceSDK.h</key>
 		<data>
-		TfYSvPry3BlACKffMRGUjPFkH9E=
+		A5OlqnWdBPiQNdsGVol5uWSGb+o=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1Ohvy+xuTFhzSVQSz3TUeJ4jOUg=
+		9EkNzszoVIbVEDXCVLPy92W5kRU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,22 +59,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LDAACDpMTZdaQ9squzFiR74/dYw=
+			bWC+TfVj8bdhECK2pxZlKEIPKD0=
 			</data>
 			<key>hash2</key>
 			<data>
-			vE7YyWFomq5cR51rAiWk7vx75oSTsQNYwDR2Pg9k3Og=
+			TDU/moIRVWD1xm7X19m16LV5YlclQ1e0mboqn8YrTC4=
 			</data>
 		</dict>
 		<key>Headers/IVoiceADConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			n5awmLDKyjBq/JlIpNOwKNLsILw=
+			oLzdbOcbMD0tajQ4ra/892U7LSE=
 			</data>
 			<key>hash2</key>
 			<data>
-			D8fYFOtj1jlCCPtzFDp1sQtcmkNfA+DxN5uijWmSN8U=
+			yOvqnYDg+4xn2OmkQFtr2gsbj6lGgO1+MQjXjdRDBhs=
 			</data>
 		</dict>
 		<key>Headers/IVoiceADInfo.h</key>
@@ -96,77 +92,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aOfhk9a7+1oyq+nQ6ifPi8m1k7c=
+			kIeq2+0BoOqtFNoybJDNcff9MsA=
 			</data>
 			<key>hash2</key>
 			<data>
-			WPmznb1cO3O1MZzl2mWI35nPlpBbhnt0qjMPp2KyRIk=
+			UPmYZX5Rp2dakkF5TsoHWY+Je/2ocIoyjIlErxdqzGo=
 			</data>
 		</dict>
 		<key>Headers/IVoiceBarrageDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			04U9d/czdnOudYXIxQvr/qPvuWc=
+			fn9lII1Cy42pCY8HstvrtMI2b28=
 			</data>
 			<key>hash2</key>
 			<data>
-			fqQ4t+4rkZf5oUIbMsS6UrWij5i2uPaKq4kGsLL+Gzk=
+			0y1WEQ1lnFtOCnk4UMdYqCuhm1VL9wBfSP7LzD6MBDI=
 			</data>
 		</dict>
 		<key>Headers/IVoiceDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZpI/Ryx1KifTxUJjA98F1uXuDcU=
+			sRO6wxRsu3dtPJTm4TbEe9uBEAQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			8TqqKuX1gdcxTutdmE2VRmPWaM8Q/sQRj9Mz2lTuYsM=
+			qUw8eUrTFs8sg+Ao18Hly2nnhiNIZ/i2FZt5WrddB0c=
 			</data>
 		</dict>
 		<key>Headers/IVoiceLaunchView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6fUfChLbwT4FsfDJQdVgbnrwFvU=
+			VsMWMDHT6HTUSSEoYbw334LjY7k=
 			</data>
 			<key>hash2</key>
 			<data>
-			YjitgSCVgDC0mWdHewFBIiGdbZnRx+XZec9PvTBrsNI=
+			F1BTqt6rnM8sUuzFVinwotB8RC3BpCBy9d5UDIVGJI0=
 			</data>
 		</dict>
 		<key>Headers/IVoiceMeidaView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GmM+qU5lxnxvTvVYTl1RpdOolpg=
+			w2th0t+bnITVXViGNtB/GdUWCFA=
 			</data>
 			<key>hash2</key>
 			<data>
-			fhUeLbDdhXPutUqE17veBqIdeR8wIflaCAPCqotyHfw=
-			</data>
-		</dict>
-		<key>Headers/IVoiceModel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			k4ol7GJza+l12J0OPIQ4i2TXu1I=
-			</data>
-			<key>hash2</key>
-			<data>
-			lywn8wkIqeTgUcbfOb5ujwWpnjw42DFy3IWWdh++OY4=
+			Pf1z6wTCWW6v4J3yzAis/kK4dyE3unkzdRxsdT9HNuM=
 			</data>
 		</dict>
 		<key>Headers/IVoiceSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TfYSvPry3BlACKffMRGUjPFkH9E=
+			A5OlqnWdBPiQNdsGVol5uWSGb+o=
 			</data>
 			<key>hash2</key>
 			<data>
-			ey5mV2azJ0B/SF72RIkCVj4LFB2mupKQNMCbo1NYtbQ=
+			RapKqzY/uInIiGYMyXKOe5FHmfg7o/UmwjgNGBNsAzc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

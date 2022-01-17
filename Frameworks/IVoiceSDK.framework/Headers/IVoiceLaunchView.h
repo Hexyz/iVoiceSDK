@@ -4,11 +4,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface IVoiceLaunchView : UIView
 
 @property(nonatomic, weak) id<IVoiceDelegate> delegate;
 
-+ (instancetype)create:(CGRect)frame adid:(NSString *)adid config:(IVoiceADConfig *)config;
++ (instancetype)create:(CGRect)frame
+                  adid:(NSString *)adid
+                config:(IVoiceADConfig *)config;
 
 @end
 

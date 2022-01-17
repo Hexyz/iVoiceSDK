@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		Bfmx4LJNs+PC2i86rYKnMfrM/vQ=
+		</data>
 		<key>Headers/IVoiceAD.h</key>
 		<data>
 		bWC+TfVj8bdhECK2pxZlKEIPKD0=
@@ -30,7 +34,7 @@
 		</data>
 		<key>Headers/IVoiceLaunchView.h</key>
 		<data>
-		VsMWMDHT6HTUSSEoYbw334LjY7k=
+		H7/PkpOHOylYKyrwFZRfP71aa0M=
 		</data>
 		<key>Headers/IVoiceMeidaView.h</key>
 		<data>
@@ -55,6 +59,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Bfmx4LJNs+PC2i86rYKnMfrM/vQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			wqy6SrV7bIx4M9ANUEKs6Dk41ehq49zVCF+ui4v4Z78=
+			</data>
+		</dict>
 		<key>Headers/IVoiceAD.h</key>
 		<dict>
 			<key>hash</key>
@@ -125,11 +140,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VsMWMDHT6HTUSSEoYbw334LjY7k=
+			H7/PkpOHOylYKyrwFZRfP71aa0M=
 			</data>
 			<key>hash2</key>
 			<data>
-			F1BTqt6rnM8sUuzFVinwotB8RC3BpCBy9d5UDIVGJI0=
+			+RW7BMxYbXh9uLSAErW/pe4SiAiR4/MWDsHg7r0H3hg=
 			</data>
 		</dict>
 		<key>Headers/IVoiceMeidaView.h</key>

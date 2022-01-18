@@ -1,16 +1,18 @@
 Pod::Spec.new do |spec|
   spec.name         = "IVoiceSDK"
-  spec.version      = "1.1.1-test"
+  spec.version      = "1.1.1-test1"
   spec.summary      = "iVoiceSDK"
   spec.description  = "Corpize iVoiceSDK for iOS."
   spec.homepage     = "https://github.com/Hexyz/iVoiceSDK"
   spec.license      = { :type => 'Copyright', :text => "Coripze copyright" }
-  spec.author       = { "𓄅 ᕼ Ξ Ⅹ 〒 Ƶ" => "haaallo@icloud.com" }
+  spec.author       = { "ᕼ Ξ Ⅹ 〒 Ƶ" => "haaallo@icloud.com" }
   spec.platform     = :ios, "10.0"
   spec.ios.deployment_target = "10.0"
   spec.source       = { :git => "https://github.com/Hexyz/iVoiceSDK.git", :tag => "#{spec.version}"}
   spec.resources    = "Frameworks/iVoiceSDK.bundle"
-  spec.resources    = "Frameworks/IVoiceAssets.xcassets"
+  s.resource_bundles = {
+    'IVoiceSDK' => ['IVoiceSDK/IVoiceSDK/Resource/IVoiceAssets.xcassets']
+  }
   spec.source_files = "Frameworks/iVoiceSDK.framework/Headers", "*.{h,m}"
   spec.vendored_frameworks = "Frameworks/**/*.{framework}"
   spec.requires_arc = true

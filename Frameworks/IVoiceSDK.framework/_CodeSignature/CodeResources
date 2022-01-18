@@ -4,9 +4,29 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		rOeRnxLw7xyADDJLgVojrUYZiLQ=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		Bfmx4LJNs+PC2i86rYKnMfrM/vQ=
+		7vLZCE+dXn1vJQ59XGXrBDxFeIk=
+		</data>
+		<key>Assets/icon_voice_close~iphone.png</key>
+		<data>
+		jp8u/IHUwQagdlCbx6wHVxvuNIY=
+		</data>
+		<key>Assets/icon_voice_close~iphone@2x.png</key>
+		<data>
+		jp8u/IHUwQagdlCbx6wHVxvuNIY=
+		</data>
+		<key>Assets/placeHolder_logo~iphone.png</key>
+		<data>
+		0DLk6vZLpwdbOl/HJCbZve4faeI=
+		</data>
+		<key>Assets/placeHolder_logo~iphone@2x.png</key>
+		<data>
+		0DLk6vZLpwdbOl/HJCbZve4faeI=
 		</data>
 		<key>Headers/IVoiceAD.h</key>
 		<data>
@@ -63,11 +83,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Bfmx4LJNs+PC2i86rYKnMfrM/vQ=
+			7vLZCE+dXn1vJQ59XGXrBDxFeIk=
 			</data>
 			<key>hash2</key>
 			<data>
-			wqy6SrV7bIx4M9ANUEKs6Dk41ehq49zVCF+ui4v4Z78=
+			wjrGRpxHWnvyf37Yc9KOPGz1LGsgzFjiD4FV1SKyYhs=
+			</data>
+		</dict>
+		<key>Assets/icon_voice_close~iphone.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jp8u/IHUwQagdlCbx6wHVxvuNIY=
+			</data>
+			<key>hash2</key>
+			<data>
+			cc4xwCSPc9JxmosIiVXIaE+l1HzsPGbdVDwhcmqjKqQ=
+			</data>
+		</dict>
+		<key>Assets/icon_voice_close~iphone@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jp8u/IHUwQagdlCbx6wHVxvuNIY=
+			</data>
+			<key>hash2</key>
+			<data>
+			cc4xwCSPc9JxmosIiVXIaE+l1HzsPGbdVDwhcmqjKqQ=
+			</data>
+		</dict>
+		<key>Assets/placeHolder_logo~iphone.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0DLk6vZLpwdbOl/HJCbZve4faeI=
+			</data>
+			<key>hash2</key>
+			<data>
+			eZQomnXvE3Gvktbft5Nhc/q9MZ9UaKCV6bbrj4gk5F4=
+			</data>
+		</dict>
+		<key>Assets/placeHolder_logo~iphone@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0DLk6vZLpwdbOl/HJCbZve4faeI=
+			</data>
+			<key>hash2</key>
+			<data>
+			eZQomnXvE3Gvktbft5Nhc/q9MZ9UaKCV6bbrj4gk5F4=
 			</data>
 		</dict>
 		<key>Headers/IVoiceAD.h</key>

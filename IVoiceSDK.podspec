@@ -10,9 +10,9 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "10.0"
   spec.source       = { :git => "https://github.com/Hexyz/iVoiceSDK.git", :tag => "#{spec.version}"}
   spec.resources    = "Frameworks/iVoiceSDK.bundle"
-  # spec.resource_bundles = {
-  #   'IVoiceSDK' => ['IVoiceSDK/IVoiceSDK/Resource/IVoiceSDK.xcassets']
-  # }
+  spec.resource_bundles = {
+    'IVoiceSDK' => ['IVoiceSDK/IVoiceSDK/Resource/IVoiceSDK.xcassets']
+  }
   spec.source_files = "Frameworks/iVoiceSDK.framework/Headers", "*.{h,m}"
   spec.vendored_frameworks = "Frameworks/**/*.{framework}"
   spec.requires_arc = true

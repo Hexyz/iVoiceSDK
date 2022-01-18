@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/Hexyz/iVoiceSDK.git", :tag => "#{spec.version}"}
   spec.resources    = "Frameworks/iVoiceSDK.bundle"
   s.resource_bundles = {
-    'IVoiceSDK' => ['Frameworks/IVoiceSDK.xcassets']
+    'IVoiceSDK' => ['IVoiceSDK/IVoiceSDK/Assets/*.xcassets']
   }
   spec.source_files = "Frameworks/iVoiceSDK.framework/Headers", "*.{h,m}"
   spec.vendored_frameworks = "Frameworks/**/*.{framework}"
